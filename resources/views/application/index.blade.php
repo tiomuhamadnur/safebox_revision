@@ -23,7 +23,7 @@
                                 <h4 class="card-title"> Applications</h4>
                             </div>
                             <div class="col-4 text-right">
-                                <a class="btn btn-primary" href="/application/create" title="Tambah Data Warga">
+                                <a class="btn btn-primary" href="/application/create" title="Add new application">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                     Add New
                                 </a>
@@ -58,7 +58,9 @@
                                             <a class="btn btn-outline-success btn-sm" href="/application/{{ $app->id }}/token"><i class="nc-icon nc-refresh-69" title="Refresh Token App"></i></a>
                                         </td>
                                         <td class="text-right">
-                                            {{ $app->description }}
+                                            <p>
+                                                {{ $app->description }}
+                                            </p>
                                         </td>
                                         <td>
                                             <li class="nav dropdown">

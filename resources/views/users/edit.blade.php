@@ -9,7 +9,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"> Ubah Data User</h4>
+                        <h4 class="card-title"> Edit User</h4>
                     </div>
                     <div class="card-body">
                         <div class="container">
@@ -18,15 +18,15 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label">
-                                        Nama
+                                        Name
                                     </label>
-                                    <input type="text" class="form-control" name="name" placeholder="Nama lengkap" value="{{ $user->name }}">
+                                    <input type="text" class="form-control" name="name" placeholder="Name" value="{{ $user->name }}">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
                                         Email
                                     </label>
-                                    <input type="email" class="form-control" name="email" placeholder="Email aktif" value="{{ $user->email }}">
+                                    <input type="email" class="form-control" name="email" placeholder="Email" value="{{ $user->email }}">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
-                                        Foto Profil
+                                        Profile Picture
                                     </label>
                                     <input for="image" name="image" id="image" type="file" class="form-control @error('image') is-invalid @enderror" >
                                     @error('image')
@@ -46,7 +46,7 @@
                                     @enderror
                                 </div>
 
-                                <input class="btn btn-success" type="submit" name="submit" value="Ubah">
+                                <input class="btn btn-success" type="submit" name="submit" value="Save Changes">
                             </form>
                         </div>
 

@@ -23,8 +23,8 @@
                                 <h4 class="card-title"> Data User</h4>
                             </div>
                             <div class="col-4 text-right">
-                                <a class="btn btn-primary" href="/users/create" title="Tambah Data Warga">
-                                    Tambah User
+                                <a class="btn btn-primary" href="/users/create" title="Add New User">
+                                    Add User
                                 </a>
                             </div>
                         </div>
@@ -34,13 +34,13 @@
                             <table class="table">
                                 <thead class="text-primary">
                                     <th>
-                                        Nama
+                                        Name
                                     </th>
                                     <th>
                                         email
                                     </th>
                                     <th>
-                                        Aksi
+                                        Action
                                     </th>
                                     
                                 </thead>
@@ -65,7 +65,7 @@
                                             <li class="nav dropdown" title="Kelola Data">
                                                 <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink2"
                                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="nc-icon nc-paper"></i>
+                                                    <i class="nc-icon nc-settings"></i>
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink2">
                                                     <a class="dropdown-item" href="/users/{{ $user->id }}/edit" title="Ubah Data">Ubah</a>

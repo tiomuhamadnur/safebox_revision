@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\MonitoringController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WargaController;
 use App\Models\Application;
@@ -59,6 +60,14 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::delete('/application/{id}', [ApplicationController::class, 'destroy']);
 
 	Route::get('/device', [DeviceController::class, 'index']);
+	Route::get('/device/{id}/token', [DeviceController::class, 'update_token']);
+	Route::get('/device/create', [DeviceController::class, 'create']);
+	Route::post('/device/store', [DeviceController::class, 'store']);
+	Route::get('/device/{id}/edit', [DeviceController::class, 'edit']);
+	Route::put('/device/{id}', [DeviceController::class, 'update']);
+	Route::delete('/device/{id}', [DeviceController::class, 'destroy']);
+
+	Route::get('/monitoring', [MonitoringController::class, 'index']);
 });
 
 Route::group(['middleware' => 'auth'], function () {

@@ -47,7 +47,7 @@
                                     <label class="form-label">
                                         Alamat
                                     </label>
-                                    <textarea name="alamat" cols="107" rows="3" placeholder="Alamat lengkap"></textarea>
+                                    <textarea class="form-control" name="alamat" placeholder="Alamat lengkap"></textarea>
                                 </div>
 
                                 <input class="btn btn-success" type="submit" name="submit" value="Simpan">

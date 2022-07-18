@@ -6,7 +6,7 @@
                     ©
                     <script>
                         document.write(new Date().getFullYear())
-                    </script>{{ __(', made with ') }}<i class="fa fa-heart heart"></i>{{ __(' by ') }}<a class="@if(Auth::guest()) text-white @endif" href="https://www.tideup.tech" target="_blank">{{ __('Tide Up Industries') }}</a>
+                    </script>{{ __(', made with ') }}<i class="fa fa-heart heart"></i>{{ __(' by ') }}<a class="@if(Auth::guest()) text-white @endif" href="https://www.tideup.tech/index.html" target="_blank">{{ __('PT. Titik Dedikasi Indonesia') }}</a>
                 </span>
             </div>
         </div>

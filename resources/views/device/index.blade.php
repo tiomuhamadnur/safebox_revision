@@ -1,6 +1,6 @@
 @extends('layouts.app', [
     'class' => '',
-    'elementActive' => 'warga'
+    'elementActive' => 'device'
 ])
 
 @section('content')
@@ -23,7 +23,7 @@
                                 <h4 class="card-title"> Devices</h4>
                             </div>
                             <div class="col-4 text-right">
-                                <a class="btn btn-primary" href="/device/create" title="Tambah Data Warga"><i class="nc-icon nc-simple-add"></i>
+                                <a class="btn btn-primary" href="/device/create" title="Add new device"><i class="fa fa-plus"></i>
                                     Add New
                                 </a>
                             </div>
@@ -43,37 +43,34 @@
                                         Description
                                     </th>
                                     <th>
-                                        Aksi
+                                        Action
                                     </th>
                                 </thead>
                                 <tbody>
-                                    {{-- @foreach ($warga as $w)
+                                    @foreach ($devices as $device)
                                     <tr>
                                         <td>
-                                            {{ $w->nama }}
-                                        </td>
-                                        <td>
-                                            {{ $w->nik }}
-                                        </td>
-                                        <td>
-                                            {{ $w->no_kk }}
+                                            {{ $device->name }}
                                         </td>
                                         <td class="text-center">
-                                            {{ $w->jenis_kelamin }}
+                                            <b>{{ $device->token }}</b>
+                                            <a class="btn btn-outline-success btn-sm" href="/device/{{ $device->id }}/token"><i class="nc-icon nc-refresh-69" title="Refresh Token Device"></i></a>
                                         </td>
-                                        <td class="text-right">
-                                            {{ $w->alamat }}
+                                        <td class="text-justify">
+                                            <p>
+                                                {{ $device->description }}
+                                            </p>
                                         </td>
                                         <td>
                                             <li class="nav dropdown">
                                                 <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink2"
                                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="nc-icon nc-paper"></i>
+                                                    <i class="nc-icon nc-settings"></i>
                                                 </a>
                                                 
                                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink2">
-                                                    <a class="dropdown-item ubah" href="/warga/{{ $w->id }}/edit" title="Ubah Data">Ubah</a>
-                                                    <form action="/warga/{{ $w->id }}" method="POST">
+                                                    <a class="dropdown-item ubah" href="/device/{{ $device->id }}/edit" title="Ubah Data">Ubah</a>
+                                                    <form action="/device/{{ $device->id }}" method="POST">
                                                         @method('delete')
                                                         @csrf
                                                         <input class="dropdown-item" type="submit" value="Hapus" title="Hapus Data">
@@ -82,7 +79,7 @@
                                             </li>
                                         </td>
                                     </tr>
-                                    @endforeach --}}
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

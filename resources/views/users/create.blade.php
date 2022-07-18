@@ -9,7 +9,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"> Tambah Data Users</h4>
+                        <h4 class="card-title"> Add New User</h4>
                     </div>
                     <div class="card-body">
                         <div class="container">
@@ -17,9 +17,9 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label">
-                                        Nama
+                                        Name
                                     </label>
-                                    <input type="text" class="form-control" name="name" placeholder="Nama" required autofocus>
+                                    <input type="text" class="form-control" name="name" placeholder="Name" required autofocus>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
-                                        Foto Profil
+                                        Profile Picture
                                     </label>
                                     <input for="image" name="image" id="image" type="file" class="form-control @error('image') is-invalid @enderror" >
                                     @error('image')
@@ -45,7 +45,7 @@
                                     @enderror
                                 </div>
 
-                                <input class="btn btn-success" type="submit" name="submit" value="Simpan">
+                                <input class="btn btn-success" type="submit" name="submit" value="Save">
                                 <div class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
                             </form>
                         </div>

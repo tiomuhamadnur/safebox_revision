@@ -1,11 +1,11 @@
 <div class="sidebar" data-color="white" data-active-color="danger">
     <div class="logo">
-        <a href="http://www.tideup.tech/" target="_blank" class="simple-text logo-mini">
+        <a href="http://www.tideup.tech/index.html" target="_blank" class="simple-text logo-mini">
             <div class="logo-image-small">
                 <img src="{{ asset('paper') }}/img/logo-small.png">
             </div>
         </a>
-        <a href="http://www.tideup.tech/" target="_blank" class="simple-text logo-normal">
+        <a href="/dashboard" class="simple-text logo-normal">
             {{ __('Tide Up Industries') }}
         </a>
     </div>
@@ -39,6 +39,12 @@
                 <a href="/device">
                     <i class="nc-icon nc-spaceship"></i>
                     <p>{{ __('Devices') }}</p>
+                </a>
+            </li>
+            <li class="{{ $elementActive == 'monitoring' ? 'active' : '' }}">
+                <a href="/monitoring">
+                    <i class="nc-icon nc-chart-pie-36"></i>
+                    <p>{{ __('Monitoring') }}</p>
                 </a>
             </li>
             {{-- <li class="{{ $elementActive == 'user' || $elementActive == 'profile' ? 'active' : '' }}">

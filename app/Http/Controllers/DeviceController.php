@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Device;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class DeviceController extends Controller
 {
@@ -13,8 +15,8 @@ class DeviceController extends Controller
      */
     public function index()
     {
-        // $devices = Device::all();
-        return view('device.index');
+        $devices = Device::all();
+        return view('device.index', compact('devices'));
     }
 
     /**
@@ -24,7 +26,7 @@ class DeviceController extends Controller
      */
     public function create()
     {
-        //
+        return view('device.create');
     }
 
     /**
@@ -35,7 +37,13 @@ class DeviceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $token = Str::random(20);
+        Device::create([
+            'name' => $request->name,
+            'token' => $token,
+            'description' => $request->description,
+        ]);
+        return redirect('/device')->withStatus(('Data berhasil ditambahkan.'));
     }
 
     /**
@@ -57,7 +65,8 @@ class DeviceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $device = Device::find($id);
+        return view('device.edit', compact(['device']));
     }
 
     /**
@@ -69,7 +78,27 @@ class DeviceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        $device = Device::find($id);
+        $device->update([
+            'name' => $request->name,
+            'description' => $request->description,
+        ]);
+        return redirect('/device')->withStatus('Data berhasil diperbaharui');
+    }
+
+    public function update_token($id)
+    {
+        $device = Device::find($id);
+        $token = Str::random(20);
+        $device->update([
+            'token' => $token,
+        ]);
+        return redirect('/device')->withStatus(('Token berhasil diperbaharui.'));
     }
 
     /**
@@ -80,6 +109,8 @@ class DeviceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $device = Device::find($id);
+        $device->delete();
+        return redirect('/device')->withStatus('Data berhasil dihapus');
     }
 }
