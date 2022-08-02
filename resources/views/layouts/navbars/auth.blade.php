@@ -6,7 +6,7 @@
             </div>
         </a>
         <a href="/dashboard" class="simple-text logo-normal">
-            {{ __('Tide Up Industries') }}
+            {{ __('SAFEBOX SYSTEM') }}
         </a>
     </div>
     <div class="sidebar-wrapper">
@@ -27,6 +27,12 @@
                 <a href="/users">
                     <i class="nc-icon nc-badge"></i>
                     <p>{{ __('User Management') }}</p>
+                </a>
+            </li>
+            <li class="{{ $elementActive == 'pegawai' ? 'active' : '' }}">
+                <a href="/pegawai">
+                    <i class="nc-icon nc-circle-10"></i>
+                    <p>{{ __('Pegawai') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'application' ? 'active' : '' }}">

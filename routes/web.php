@@ -3,6 +3,8 @@
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\MonitoringController;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\PeopleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WargaController;
 use App\Models\Application;
@@ -68,6 +70,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::delete('/device/{id}', [DeviceController::class, 'destroy']);
 
 	Route::get('/monitoring', [MonitoringController::class, 'index']);
+
+	Route::get('/pegawai', [PegawaiController::class, 'index']);
 });
 
 Route::group(['middleware' => 'auth'], function () {
