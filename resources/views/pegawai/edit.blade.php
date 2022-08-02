@@ -1,6 +1,6 @@
 @extends('layouts.app', [
     'class' => '',
-    'elementActive' => 'warga'
+    'elementActive' => 'pegawai'
 ])
 
 @section('content')
@@ -9,30 +9,30 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"> Ubah Data Warga</h4>
+                        <h4 class="card-title"> Ubah Data Pegawai</h4>
                     </div>
                     <div class="card-body">
                         <div class="container">
-                            <form action="/warga/{{ $warga->id }}" method="POST">
+                            <form action="/pegawai/{{ $pegawai->id }}" method="POST">
                                 @method('put')
                                 @csrf 
                                 <div class="mb-3">
                                     <label class="form-label">
                                         Nama
                                     </label>
-                                    <input type="text" class="form-control" name="nama" placeholder="Nama lengkap" value="{{ $warga->nama }}">
+                                    <input type="text" class="form-control" name="name" value="{{ $pegawai->name }}">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
                                         NIK
                                     </label>
-                                    <input type="text" class="form-control" name="nik" placeholder="Nomor Induk Kependudukan" value="{{ $warga->nik }}">
+                                    <input type="text" class="form-control" name="nik" value="{{ $pegawai->nik }}">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
-                                        No KK
+                                        UID Card
                                     </label>
-                                    <input type="text" class="form-control" name="no_kk" placeholder="Nomor Kartu Keluarga" value="{{ $warga->no_kk }}">
+                                    <input type="text" class="form-control" name="uid" value="{{ $pegawai->uid }}">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
@@ -40,15 +40,33 @@
                                     </label> <br>
                                     <select class="form-control" aria-label="Default select example" name="jenis_kelamin">
                                         <option>Pilih jenis kelamin</option>
-                                        <option value="L" @if ($warga->jenis_kelamin =="L") selected @endif>Laki-laki</option>
-                                        <option value="P" @if ($warga->jenis_kelamin =="P") selected @endif>Perempuan</option>
+                                        <option value="L" @if ($pegawai->jenis_kelamin =="L") selected @endif>Laki-laki</option>
+                                        <option value="P" @if ($pegawai->jenis_kelamin =="P") selected @endif>Perempuan</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
-                                        Alamat
+                                        Departement
                                     </label>
-                                    <textarea name="alamat" cols="107" rows="3" placeholder="Alamat lengkap" value="{{ $warga->alamat }}">{{ $warga->alamat }}</textarea>
+                                    <input type="text" class="form-control" name="departement" value="{{ $pegawai->departement }}">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">
+                                        Section
+                                    </label>
+                                    <input type="text" class="form-control" name="section" value="{{ $pegawai->section }}">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">
+                                        Email
+                                    </label>
+                                    <input type="text" class="form-control" name="email" value="{{ $pegawai->email }}">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">
+                                        No. HP
+                                    </label>
+                                    <input type="text" class="form-control" name="no_hp" value="{{ $pegawai->no_hp }}">
                                 </div>
                                 <input class="btn btn-success" type="submit" name="submit" value="Ubah">
                             </form>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\InvalidController;
 use App\Http\Controllers\MonitoringController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PeopleController;
@@ -77,6 +78,10 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/pegawai/{id}/edit', [PegawaiController::class, 'edit']);
 	Route::put('/pegawai/{id}', [PegawaiController::class, 'update']);
 	Route::delete('/pegawai/{id}', [PegawaiController::class, 'destroy']);
+
+	Route::get('/invalid', [InvalidController::class, 'index']);
+	Route::get('/invalid/{id}', [InvalidController::class, 'create']);
+	Route::delete('/invalid/{id}', [InvalidController::class, 'destroy']);
 });
 
 Route::group(['middleware' => 'auth'], function () {

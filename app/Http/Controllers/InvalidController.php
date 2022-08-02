@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pegawai;
+use App\Models\Invalid;
 use Illuminate\Http\Request;
 
-class PegawaiController extends Controller
+class InvalidController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class PegawaiController extends Controller
      */
     public function index()
     {
-        $pegawai = Pegawai::all();
-        return view('pegawai.index', compact(['pegawai']));
+        $invalid = Invalid::all();
+        return view('invalid.index', compact(['invalid']));
     }
 
     /**
@@ -23,9 +23,10 @@ class PegawaiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        return view('pegawai.create');
+        $invalid = Invalid::find($id);
+        return view('pegawai.create', compact(['invalid']));
     }
 
     /**
@@ -36,17 +37,16 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        Pegawai::create($request->except(['_token', 'submit']));
-        return redirect('/pegawai')->withStatus(('Data berhasil ditambahkan.'));
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Pegawai  $pegawai
+     * @param  \App\Models\Invalid  $invalid
      * @return \Illuminate\Http\Response
      */
-    public function show(Pegawai $pegawai)
+    public function show(Invalid $invalid)
     {
         //
     }
@@ -54,37 +54,36 @@ class PegawaiController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Pegawai  $pegawai
+     * @param  \App\Models\Invalid  $invalid
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Invalid $invalid)
     {
-        $pegawai = Pegawai::find($id);
-        return view('pegawai.edit', compact(['pegawai']));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Pegawai  $pegawai
+     * @param  \App\Models\Invalid  $invalid
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Invalid $invalid)
     {
-        $pegawai = Pegawai::find($id);
-        $pegawai->update($request->except(['_token', 'submit']));
-        return redirect('/pegawai')->withStatus(('Data berhasil diperbaharui.'));
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Pegawai  $pegawai
+     * @param  \App\Models\Invalid  $invalid
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pegawai $pegawai)
+    public function destroy($id)
     {
-        //
+        $invalid = Invalid::find($id);
+        $invalid->delete();
+        return back()->withStatus(('Data berhasil dihapus.'));
     }
 }

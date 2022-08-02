@@ -23,7 +23,7 @@
                                 <h4 class="card-title"> Data Pegawai</h4>
                             </div>
                             <div class="col-4 text-right">
-                                <a class="btn btn-primary" href="/pegawai/create" title="Tambah Data Warga">
+                                <a class="btn btn-primary" href="/invalid" title="Tambah Data Warga">
                                     Tambah Data Pegawai
                                 </a>
                             </div>

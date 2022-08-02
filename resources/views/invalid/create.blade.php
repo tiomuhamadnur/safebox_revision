@@ -31,7 +31,7 @@
                                     <label class="form-label">
                                         UID Card
                                     </label>
-                                    <input type="text" class="form-control font-weight-bold" name="uid" value="{{ $invalid->uid }}">
+                                    <input type="text" class="form-control" name="uid">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
