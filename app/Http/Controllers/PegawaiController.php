@@ -25,7 +25,7 @@ class PegawaiController extends Controller
      */
     public function create()
     {
-        //
+        return view('pegawai.create');
     }
 
     /**

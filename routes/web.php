@@ -72,6 +72,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/monitoring', [MonitoringController::class, 'index']);
 
 	Route::get('/pegawai', [PegawaiController::class, 'index']);
+	Route::get('/pegawai/create', [PegawaiController::class, 'create']);
 });
 
 Route::group(['middleware' => 'auth'], function () {

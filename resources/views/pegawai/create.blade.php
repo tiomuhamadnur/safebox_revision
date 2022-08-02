@@ -1,6 +1,6 @@
 @extends('layouts.app', [
     'class' => '',
-    'elementActive' => 'warga'
+    'elementActive' => 'pegawai'
 ])
 
 @section('content')
@@ -9,11 +9,11 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"> Tambah Data Warga</h4>
+                        <h4 class="card-title"> Tambah Data Pegawai</h4>
                     </div>
                     <div class="card-body">
                         <div class="container">
-                            <form action="/warga/store" method="POST">
+                            <form action="/pegawai/store" method="POST">
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label">
