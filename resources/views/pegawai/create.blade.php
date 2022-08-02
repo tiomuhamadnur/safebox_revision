@@ -19,19 +19,19 @@
                                     <label class="form-label">
                                         Nama
                                     </label>
-                                    <input type="text" class="form-control" name="nama" placeholder="Nama lengkap">
+                                    <input type="text" class="form-control" name="name">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
                                         NIK
                                     </label>
-                                    <input type="text" class="form-control" name="nik" placeholder="Nomor Induk Kependudukan">
+                                    <input type="text" class="form-control" name="nik">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
-                                        No KK
+                                        UID Card
                                     </label>
-                                    <input type="text" class="form-control" name="no_kk" placeholder="Nomor Kartu Keluarga">
+                                    <input type="text" class="form-control" name="uid">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
@@ -45,9 +45,27 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
-                                        Alamat
+                                        Departement
                                     </label>
-                                    <textarea class="form-control" name="alamat" placeholder="Alamat lengkap"></textarea>
+                                    <input type="text" class="form-control" name="departement">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">
+                                        Section
+                                    </label>
+                                    <input type="text" class="form-control" name="section">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">
+                                        Email
+                                    </label>
+                                    <input type="text" class="form-control" name="email">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">
+                                        No. Hp
+                                    </label>
+                                    <input type="text" class="form-control" name="no_hp">
                                 </div>
 
                                 <input class="btn btn-success" type="submit" name="submit" value="Simpan">

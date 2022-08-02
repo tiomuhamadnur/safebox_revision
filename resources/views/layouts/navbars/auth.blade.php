@@ -1,8 +1,8 @@
 <div class="sidebar" data-color="white" data-active-color="danger">
     <div class="logo">
-        <a href="http://www.tideup.tech/index.html" target="_blank" class="simple-text logo-mini">
+        <a href="#" target="_blank" class="simple-text logo-mini">
             <div class="logo-image-small">
-                <img src="{{ asset('paper') }}/img/logo-small.png">
+                <img src="{{ asset('paper') }}/img/safebox_logo.png">
             </div>
         </a>
         <a href="/dashboard" class="simple-text logo-normal">
@@ -17,12 +17,6 @@
                     <p>{{ __('Dashboard') }}</p>
                 </a>
             </li>
-            <li class="{{ $elementActive == 'warga' ? 'active' : '' }}">
-                <a href="/warga">
-                    <i class="nc-icon nc-circle-10"></i>
-                    <p>{{ __('Warga') }}</p>
-                </a>
-            </li>
             <li class="{{ $elementActive == 'users' ? 'active' : '' }}">
                 <a href="/users">
                     <i class="nc-icon nc-badge"></i>
@@ -35,6 +29,12 @@
                     <p>{{ __('Pegawai') }}</p>
                 </a>
             </li>
+            <li class="{{ $elementActive == 'invalid' ? 'active' : '' }}">
+                <a href="/invalid">
+                    <i class="nc-icon nc-simple-remove"></i>
+                    <p>{{ __('Invalid UID') }}</p>
+                </a>
+            </li>
             <li class="{{ $elementActive == 'application' ? 'active' : '' }}">
                 <a href="/application">
                     <i class="nc-icon nc-atom"></i>
@@ -45,6 +45,12 @@
                 <a href="/device">
                     <i class="nc-icon nc-spaceship"></i>
                     <p>{{ __('Devices') }}</p>
+                </a>
+            </li>
+            <li class="{{ $elementActive == 'warga' ? 'active' : '' }}">
+                <a href="/warga">
+                    <i class="nc-icon nc-circle-10"></i>
+                    <p>{{ __('Warga') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'monitoring' ? 'active' : '' }}">
