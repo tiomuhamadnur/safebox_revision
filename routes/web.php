@@ -82,6 +82,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/invalid', [InvalidController::class, 'index']);
 	Route::get('/invalid/{id}', [InvalidController::class, 'create']);
 	Route::delete('/invalid/{id}', [InvalidController::class, 'destroy']);
+	Route::get('/invalid/delete', [InvalidController::class, 'delete_semua']);
 });
 
 Route::group(['middleware' => 'auth'], function () {

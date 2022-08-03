@@ -86,4 +86,10 @@ class InvalidController extends Controller
         $invalid->delete();
         return back()->withStatus(('Data berhasil dihapus.'));
     }
+
+    public function delete_semua()
+    {
+        Invalid::table('invalid')->delete();
+        return back()->withStatus(('Data berhasil dihapus.'));
+    }
 }
