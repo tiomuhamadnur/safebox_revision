@@ -30,9 +30,9 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
-                                        UID Card
+                                        UID Card (Default)
                                     </label>
-                                    <input type="text" class="form-control" name="uid" value="{{ $pegawai->uid }}">
+                                    <input type="text" class="form-control font-weight-bold" name="uid" value="{{ $pegawai->uid }}">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">

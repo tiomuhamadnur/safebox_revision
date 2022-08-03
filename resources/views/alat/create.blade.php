@@ -1,6 +1,6 @@
 @extends('layouts.app', [
     'class' => '',
-    'elementActive' => 'pegawai'
+    'elementActive' => 'alat'
 ])
 
 @section('content')
@@ -9,11 +9,11 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"> Tambah Data Pegawai</h4>
+                        <h4 class="card-title"> Tambah Data Alat</h4>
                     </div>
                     <div class="card-body">
                         <div class="container">
-                            <form action="/pegawai/store" method="POST">
+                            <form action="/alat/store" method="POST">
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label">
@@ -23,49 +23,43 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
-                                        NIK
+                                        ID Inventory
                                     </label>
-                                    <input type="text" class="form-control" name="nik">
+                                    <input type="text" class="form-control" name="id_inventory">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
-                                        UID Card (default)
+                                        UID Tag
                                     </label>
-                                    <input type="text" class="form-control font-weight-bold" name="uid" value="{{ $invalid->uid }}">
+                                    <input type="text" class="form-control" name="uid">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
-                                        Jenis Kelamin
+                                        Tgl. Sertifikasi
+                                    </label>
+                                    <input type="date" class="form-control" name="tgl_sertifikasi">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">
+                                        Tgl. Expired
+                                    </label>
+                                    <input type="date" class="form-control" name="tgl_expired">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">
+                                        Tipe
                                     </label> <br>
-                                    <select class="form-control" aria-label="Default select example" name="jenis_kelamin">
-                                        <option>Pilih jenis kelamin</option>
-                                        <option value="L">Laki-laki</option>
-                                        <option value="P">Perempuan</option>
+                                    <select class="form-control" aria-label="Default select example" name="tipe">
+                                        <option disabled>Pilih Tipe Alat</option>
+                                        <option value="consumable">Consumable</option>
+                                        <option value="non-consumable">Non-Consumable</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">
-                                        Departement
+                                        Stock (Qty)
                                     </label>
-                                    <input type="text" class="form-control" name="departement">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">
-                                        Section
-                                    </label>
-                                    <input type="text" class="form-control" name="section">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">
-                                        Email
-                                    </label>
-                                    <input type="text" class="form-control" name="email">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">
-                                        No. Hp
-                                    </label>
-                                    <input type="text" class="form-control" name="no_hp">
+                                    <input type="text" class="form-control" name="stock">
                                 </div>
 
                                 <input class="btn btn-success" type="submit" name="submit" value="Simpan">

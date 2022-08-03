@@ -23,7 +23,8 @@
                                 <h4 class="card-title"> Data Invalid</h4>
                             </div>
                             <div class="col-4 text-right">
-                                <a class="btn btn-danger" href="#" title="Hapus seluruh data invalid">
+                                <a class="btn btn-warning" href="#" title="Hapus seluruh data invalid">
+                                    <i class="fa fa-trash"></i>
                                     Hapus Data Invalid
                                 </a>
                             </div>

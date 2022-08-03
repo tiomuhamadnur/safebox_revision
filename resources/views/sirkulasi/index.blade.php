@@ -1,6 +1,6 @@
 @extends('layouts.app', [
     'class' => '',
-    'elementActive' => 'pegawai'
+    'elementActive' => 'sirkulasi'
 ])
 
 @section('content')
@@ -20,12 +20,12 @@
                     <div class="card-header">
                         <div class="row align-item-center">
                             <div class="col-8">
-                                <h4 class="card-title"> Data Pegawai</h4>
+                                <h4 class="card-title"> Data Sirkulasi</h4>
                             </div>
                             <div class="col-4 text-right">
-                                <a class="btn btn-primary" href="/invalid" title="Tambah Data Warga">
-                                    <i class="fa fa-plus"></i>
-                                    Tambah Data Pegawai
+                                <a class="btn btn-success" href="#" title="Export Data Sirkulasi">
+                                    <i class="nc-icon nc-send"></i>
+                                    Export
                                 </a>
                             </div>
                         </div>
@@ -35,59 +35,50 @@
                             <table class="table">
                                 <thead class="text-primary text-center">
                                     <th>
-                                        Nama
+                                        Nama Peminjam
                                     </th>
                                     <th>
-                                        NIK
+                                        Nama Alat
                                     </th>
                                     <th>
-                                        UID Card
+                                        ID Inventory
                                     </th>
                                     <th>
-                                        Jenis Kelamin
+                                        Tgl. Expired
                                     </th>
                                     <th>
-                                        Departement
+                                        Waktu Peminjaman
                                     </th>
                                     <th>
-                                        Section
+                                        Waktu Pengembalian
                                     </th>
                                     <th>
-                                        Email
-                                    </th>
-                                    <th>
-                                        No. HP
-                                    </th>
-                                    <th>
-                                        Aksi
+                                        Status
                                     </th>
                                 </thead>
-                                <tbody>
-                                    @foreach ($pegawai as $item)
+                                <tbody class="text-center">
+                                    {{-- @foreach ($alat as $item)
                                     <tr>
                                         <td>
                                             {{ $item->name }}
                                         </td>
                                         <td>
-                                            {{ $item->nik }}
+                                            {{ $item->id_inventory }}
                                         </td>
                                         <td>
                                             {{ $item->uid }}
                                         </td>
-                                        <td class="text-center">
-                                            {{ $item->jenis_kelamin }}
-                                        </td>
-                                        <td class="text-center">
-                                            {{ $item->departement }}
+                                        <td>
+                                            {{ $item->tgl_sertifikasi }}
                                         </td>
                                         <td>
-                                            {{ $item->section }}
+                                            {{ $item->tgl_expired }}
                                         </td>
                                         <td>
-                                            {{ $item->email }}
+                                            {{ $item->tipe }}
                                         </td>
                                         <td>
-                                            {{ $item->no_hp }}
+                                            {{ $item->stock }}
                                         </td>
                                         <td>
                                             <li class="nav dropdown">
@@ -97,8 +88,8 @@
                                                 </a>
                                                 
                                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink2">
-                                                    <a class="dropdown-item ubah" href="/pegawai/{{ $item->id }}/edit" title="Ubah Data">Ubah</a>
-                                                    <form action="/pegawai/{{ $item->id }}" method="POST">
+                                                    <a class="dropdown-item ubah" href="/alat/{{ $item->id }}/edit" title="Ubah Data">Ubah</a>
+                                                    <form action="/alat/{{ $item->id }}" method="POST">
                                                         @method('delete')
                                                         @csrf
                                                         <input class="dropdown-item" type="submit" value="Hapus" title="Hapus Data">
@@ -107,7 +98,7 @@
                                             </li>
                                         </td>
                                     </tr>
-                                    @endforeach
+                                    @endforeach --}}
                                 </tbody>
                             </table>
                         </div>

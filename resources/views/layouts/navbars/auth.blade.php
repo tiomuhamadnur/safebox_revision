@@ -13,7 +13,7 @@
         <ul class="nav">
             <li class="{{ $elementActive == 'dashboard' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'dashboard') }}">
-                    <i class="nc-icon nc-bank"></i>
+                    <i class="nc-icon nc-chart-pie-36"></i>
                     <p>{{ __('Dashboard') }}</p>
                 </a>
             </li>
@@ -35,7 +35,19 @@
                     <p>{{ __('Invalid UID') }}</p>
                 </a>
             </li>
-            <li class="{{ $elementActive == 'application' ? 'active' : '' }}">
+            <li class="{{ $elementActive == 'alat' ? 'active' : '' }}">
+                <a href="/alat">
+                    <i class="nc-icon nc-settings"></i>
+                    <p>{{ __('Alat') }}</p>
+                </a>
+            </li>
+            <li class="{{ $elementActive == 'sirkulasi' ? 'active' : '' }}">
+                <a href="/sirkulasi">
+                    <i class="nc-icon nc-refresh-69"></i>
+                    <p>{{ __('Sirkulasi') }}</p>
+                </a>
+            </li>
+            {{-- <li class="{{ $elementActive == 'application' ? 'active' : '' }}">
                 <a href="/application">
                     <i class="nc-icon nc-atom"></i>
                     <p>{{ __('Applications') }}</p>
@@ -58,7 +70,7 @@
                     <i class="nc-icon nc-chart-pie-36"></i>
                     <p>{{ __('Monitoring') }}</p>
                 </a>
-            </li>
+            </li> --}}
             {{-- <li class="{{ $elementActive == 'user' || $elementActive == 'profile' ? 'active' : '' }}">
                 <a data-toggle="collapse" aria-expanded="true" href="#laravelExamples">
                     <i class="nc-icon"><img src="{{ asset('paper/img/laravel.svg') }}"></i>

@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Invalid;
-use App\Models\Pegawai;
+use App\Models\Alat;
 use Illuminate\Http\Request;
 
-class PegawaiController extends Controller
+class AlatController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class PegawaiController extends Controller
      */
     public function index()
     {
-        $pegawai = Pegawai::all();
-        return view('pegawai.index', compact(['pegawai']));
+        $alat = Alat::all();
+        return view('alat.index', compact(['alat']));
     }
 
     /**
@@ -26,7 +25,7 @@ class PegawaiController extends Controller
      */
     public function create()
     {
-        return view('pegawai.create');
+        return view('alat.create');
     }
 
     /**
@@ -37,19 +36,17 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        Pegawai::create($request->except(['_token', 'submit']));
-        $uid = $request->uid;
-        Invalid::where('uid', $uid)->delete();
-        return redirect('/pegawai')->withStatus(('Data berhasil ditambahkan.'));
+        Alat::create($request->except(['_token', 'submit']));
+        return redirect('/alat')->withStatus(('Data berhasil ditambahkan.'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Pegawai  $pegawai
+     * @param  \App\Models\Alat  $alat
      * @return \Illuminate\Http\Response
      */
-    public function show(Pegawai $pegawai)
+    public function show(Alat $alat)
     {
         //
     }
@@ -57,39 +54,39 @@ class PegawaiController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Pegawai  $pegawai
+     * @param  \App\Models\Alat  $alat
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $pegawai = Pegawai::find($id);
-        return view('pegawai.edit', compact(['pegawai']));
+        $alat = Alat::find($id);
+        return view('alat.edit', compact(['alat']));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Pegawai  $pegawai
+     * @param  \App\Models\Alat  $alat
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $pegawai = Pegawai::find($id);
-        $pegawai->update($request->except(['_token', 'submit']));
-        return redirect('/pegawai')->withStatus(('Data berhasil diperbaharui.'));
+        $alat = Alat::find($id);
+        $alat->update($request->except(['_token', 'submit']));
+        return redirect('/alat')->withStatus(('Data berhasil diperbaharui.'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Pegawai  $pegawai
+     * @param  \App\Models\Alat  $alat
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $pegawai = Pegawai::find($id);
-        $pegawai->delete();
+        $alat = Alat::find($id);
+        $alat->delete();
         return back()->withStatus(('Data berhasil dihapus.'));
     }
 }

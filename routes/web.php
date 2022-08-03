@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\AlatController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\InvalidController;
 use App\Http\Controllers\MonitoringController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PeopleController;
+use App\Http\Controllers\SirkulasiController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WargaController;
 use App\Models\Application;
@@ -83,6 +85,15 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/invalid/{id}', [InvalidController::class, 'create']);
 	Route::delete('/invalid/{id}', [InvalidController::class, 'destroy']);
 	Route::get('/invalid/delete', [InvalidController::class, 'delete_semua']);
+
+	Route::get('/alat', [AlatController::class, 'index']);
+	Route::get('/alat/create', [AlatController::class, 'create']);
+	Route::post('/alat/store', [AlatController::class, 'store']);
+	Route::get('/alat/{id}/edit', [AlatController::class, 'edit']);
+	Route::put('/alat/{id}', [AlatController::class, 'update']);
+	Route::delete('/alat/{id}', [AlatController::class, 'destroy']);
+
+	Route::get('/sirkulasi', [SirkulasiController::class, 'index']);
 });
 
 Route::group(['middleware' => 'auth'], function () {
