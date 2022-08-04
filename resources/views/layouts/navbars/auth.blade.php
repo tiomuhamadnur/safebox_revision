@@ -1,6 +1,6 @@
 <div class="sidebar" data-color="white" data-active-color="danger">
     <div class="logo">
-        <a href="#" target="_blank" class="simple-text logo-mini">
+        <a href="#" class="simple-text logo-mini">
             <div class="logo-image-small">
                 <img src="{{ asset('paper') }}/img/safebox_logo.png">
             </div>
@@ -20,7 +20,7 @@
             <li class="{{ $elementActive == 'users' ? 'active' : '' }}">
                 <a href="/users">
                     <i class="nc-icon nc-badge"></i>
-                    <p>{{ __('User Management') }}</p>
+                    <p>{{ __('User Managemen') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'pegawai' ? 'active' : '' }}">
@@ -45,6 +45,12 @@
                 <a href="/sirkulasi">
                     <i class="nc-icon nc-refresh-69"></i>
                     <p>{{ __('Sirkulasi') }}</p>
+                </a>
+            </li>
+            <li class="{{ $elementActive == 'alat-rusak' ? 'active' : '' }}">
+                <a href="/alat-rusak">
+                    <i class="nc-icon nc-alert-circle-i"></i>
+                    <p>{{ __('Alat Rusak') }}</p>
                 </a>
             </li>
             {{-- <li class="{{ $elementActive == 'application' ? 'active' : '' }}">
@@ -102,7 +108,7 @@
                     <p>{{ __('Icons') }}</p>
                 </a>
             </li>
-            <li class="{{ $elementActive == 'map' ? 'active' : '' }}">
+            {{-- <li class="{{ $elementActive == 'map' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'map') }}">
                     <i class="nc-icon nc-pin-3"></i>
                     <p>{{ __('Maps') }}</p>
@@ -125,7 +131,7 @@
                     <i class="nc-icon nc-caps-small"></i>
                     <p>{{ __('Typography') }}</p>
                 </a>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </div>

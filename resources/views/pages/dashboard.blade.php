@@ -17,9 +17,8 @@
                             </div>
                             <div class="col-7 col-md-8">
                                 <div class="numbers">
-                                    <p class="card-category">Capacity</p>
-                                    <p class="card-title">150GB
-                                        <p>
+                                    <p class="card-category">Pegawai</p>
+                                    <p class="card-title">28<p>
                                 </div>
                             </div>
                         </div>
@@ -43,9 +42,10 @@
                             </div>
                             <div class="col-7 col-md-8">
                                 <div class="numbers">
-                                    <p class="card-category">Revenue</p>
-                                    <p class="card-title">$ 1,345
-                                        <p>
+                                    <p class="card-category">Alat</p>
+                                    <p class="card-title">
+                                        128
+                                    <p>
                                 </div>
                             </div>
                         </div>
@@ -69,9 +69,10 @@
                             </div>
                             <div class="col-7 col-md-8">
                                 <div class="numbers">
-                                    <p class="card-category">Errors</p>
-                                    <p class="card-title">23
-                                        <p>
+                                    <p class="card-category">Alat Rusak</p>
+                                    <p class="card-title">
+                                        7
+                                    <p>
                                 </div>
                             </div>
                         </div>
@@ -95,9 +96,10 @@
                             </div>
                             <div class="col-7 col-md-8">
                                 <div class="numbers">
-                                    <p class="card-category">Followers</p>
-                                    <p class="card-title">+45K
-                                        <p>
+                                    <p class="card-category">Invalid UID</p>
+                                    <p class="card-title">
+                                        87
+                                    <p>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +117,7 @@
             <div class="col-md-12">
                 <div class="card ">
                     <div class="card-header ">
-                        <h5 class="card-title">Users Behavior</h5>
+                        <h5 class="card-title">Trend Alat Rusak</h5>
                         <p class="card-category">24 Hours performance</p>
                     </div>
                     <div class="card-body ">

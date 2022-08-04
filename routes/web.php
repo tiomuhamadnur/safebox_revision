@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlatController;
+use App\Http\Controllers\AlatRusakController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\InvalidController;
@@ -94,6 +95,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::delete('/alat/{id}', [AlatController::class, 'destroy']);
 
 	Route::get('/sirkulasi', [SirkulasiController::class, 'index']);
+
+	Route::get('/alat-rusak', [AlatRusakController::class, 'index']);
 });
 
 Route::group(['middleware' => 'auth'], function () {

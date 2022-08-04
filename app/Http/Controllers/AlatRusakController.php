@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Alat;
-use App\Models\Pegawai;
-use App\Models\Sirkulasi;
+use App\Models\AlatRusak;
 use Illuminate\Http\Request;
 
-class SirkulasiController extends Controller
+class AlatRusakController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +14,9 @@ class SirkulasiController extends Controller
      */
     public function index()
     {
-        $sirkulasi = Sirkulasi::get();
-        return view('sirkulasi.index', compact(['sirkulasi']));
+        // $alat_rusak = AlatRusak::all();
+        // return view('alat-rusak.index', compact(['alat_rusak']));
+        return view('alat-rusak.index');
     }
 
     /**
@@ -44,10 +43,10 @@ class SirkulasiController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Sirkulasi  $sirkulasi
+     * @param  \App\Models\AlatRusak  $alatRusak
      * @return \Illuminate\Http\Response
      */
-    public function show(Sirkulasi $sirkulasi)
+    public function show(AlatRusak $alatRusak)
     {
         //
     }
@@ -55,10 +54,10 @@ class SirkulasiController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Sirkulasi  $sirkulasi
+     * @param  \App\Models\AlatRusak  $alatRusak
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sirkulasi $sirkulasi)
+    public function edit(AlatRusak $alatRusak)
     {
         //
     }
@@ -67,10 +66,10 @@ class SirkulasiController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Sirkulasi  $sirkulasi
+     * @param  \App\Models\AlatRusak  $alatRusak
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sirkulasi $sirkulasi)
+    public function update(Request $request, AlatRusak $alatRusak)
     {
         //
     }
@@ -78,10 +77,10 @@ class SirkulasiController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Sirkulasi  $sirkulasi
+     * @param  \App\Models\AlatRusak  $alatRusak
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sirkulasi $sirkulasi)
+    public function destroy(AlatRusak $alatRusak)
     {
         //
     }

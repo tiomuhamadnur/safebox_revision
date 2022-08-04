@@ -20,7 +20,9 @@
                     <div class="card-header">
                         <div class="row align-item-center">
                             <div class="col-8">
-                                <h4 class="card-title"> Data Invalid</h4>
+                                <h4 class="card-title">
+                                    <i class="nc-icon nc-simple-remove"></i>
+                                    Data Invalid</h4>
                             </div>
                             <div class="col-4 text-right">
                                 <a class="btn btn-warning" href="#" title="Hapus seluruh data invalid">
@@ -34,6 +36,9 @@
                         <div class="table-responsive">
                             <table class="table text-center">
                                 <thead class="text-primary text-center">
+                                    <th>
+                                        No
+                                    </th>
                                     <th>
                                         UID Card
                                     </th>
@@ -50,6 +55,9 @@
                                 <tbody>
                                     @foreach ($invalid as $item)
                                     <tr>
+                                        <td>
+                                            {{ $loop->iteration }}
+                                        </td>
                                         <td>
                                             {{ $item->uid }}
                                         </td>

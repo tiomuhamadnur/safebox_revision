@@ -20,7 +20,10 @@
                     <div class="card-header">
                         <div class="row align-item-center">
                             <div class="col-8">
-                                <h4 class="card-title"> Data Alat</h4>
+                                <h4 class="card-title">
+                                    <i class="nc-icon nc-settings"></i>
+                                    Data Alat
+                                </h4>
                             </div>
                             <div class="col-4 text-right">
                                 <a class="btn btn-primary" href="/alat/create" title="Tambah Data Alat">
@@ -34,6 +37,9 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <thead class="text-primary text-center">
+                                    <th>
+                                        No
+                                    </th>
                                     <th>
                                         Nama
                                     </th>
@@ -62,6 +68,9 @@
                                 <tbody class="text-center">
                                     @foreach ($alat as $item)
                                     <tr>
+                                        <td>
+                                            {{ $loop->iteration }}
+                                        </td>
                                         <td>
                                             {{ $item->name }}
                                         </td>

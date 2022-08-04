@@ -20,7 +20,9 @@
                     <div class="card-header">
                         <div class="row align-item-center">
                             <div class="col-8">
-                                <h4 class="card-title"> Data Pegawai</h4>
+                                <h4 class="card-title">
+                                    <i class="nc-icon nc-circle-10"></i> 
+                                    Data Pegawai</h4>
                             </div>
                             <div class="col-4 text-right">
                                 <a class="btn btn-primary" href="/invalid" title="Tambah Data Warga">
@@ -34,6 +36,9 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <thead class="text-primary text-center">
+                                    <th>
+                                        No
+                                    </th>
                                     <th>
                                         Nama
                                     </th>
@@ -65,6 +70,9 @@
                                 <tbody>
                                     @foreach ($pegawai as $item)
                                     <tr>
+                                        <td>
+                                            {{ $loop->iteration }}
+                                        </td>
                                         <td>
                                             {{ $item->name }}
                                         </td>

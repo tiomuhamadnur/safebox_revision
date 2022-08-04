@@ -20,7 +20,10 @@
                     <div class="card-header">
                         <div class="row align-item-center">
                             <div class="col-8">
-                                <h4 class="card-title"> Data Sirkulasi</h4>
+                                <h4 class="card-title">
+                                    <i class="nc-icon nc-refresh-69"></i>
+                                    Data Sirkulasi
+                                </h4>
                             </div>
                             <div class="col-4 text-right">
                                 <a class="btn btn-success" href="#" title="Export Data Sirkulasi">
@@ -34,6 +37,9 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <thead class="text-primary text-center">
+                                    <th>
+                                        No
+                                    </th>
                                     <th>
                                         Nama Peminjam
                                     </th>
@@ -57,48 +63,34 @@
                                     </th>
                                 </thead>
                                 <tbody class="text-center">
-                                    {{-- @foreach ($alat as $item)
+                                    @foreach ($sirkulasi as $item)
                                     <tr>
                                         <td>
-                                            {{ $item->name }}
+                                            {{ $loop->iteration }}
+                                        </td>
+                                        <td class="text-left">
+                                            {{ $item->pegawai->name }}
+                                        </td>
+                                        <td class="text-left">
+                                            {{ $item->alat->name }}
+                                        </td>
+                                        <td class="text-left">
+                                            {{ $item->alat->id_inventory }}
                                         </td>
                                         <td>
-                                            {{ $item->id_inventory }}
+                                            {{ $item->alat->tgl_expired }}
                                         </td>
                                         <td>
-                                            {{ $item->uid }}
+                                            {{ $item->created_at }}
                                         </td>
                                         <td>
-                                            {{ $item->tgl_sertifikasi }}
+                                            {{ $item->updated_at }}
                                         </td>
                                         <td>
-                                            {{ $item->tgl_expired }}
-                                        </td>
-                                        <td>
-                                            {{ $item->tipe }}
-                                        </td>
-                                        <td>
-                                            {{ $item->stock }}
-                                        </td>
-                                        <td>
-                                            <li class="nav dropdown">
-                                                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink2"
-                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="nc-icon nc-settings-gear-65"></i>
-                                                </a>
-                                                
-                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink2">
-                                                    <a class="dropdown-item ubah" href="/alat/{{ $item->id }}/edit" title="Ubah Data">Ubah</a>
-                                                    <form action="/alat/{{ $item->id }}" method="POST">
-                                                        @method('delete')
-                                                        @csrf
-                                                        <input class="dropdown-item" type="submit" value="Hapus" title="Hapus Data">
-                                                    </form>
-                                                </div>
-                                            </li>
+                                            {{ $item->status }}
                                         </td>
                                     </tr>
-                                    @endforeach --}}
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

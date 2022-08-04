@@ -3,12 +3,12 @@
         <div class="row">
             <div class="credits ml-auto">
                 <span class="copyright">
-                    <a class="@if(Auth::guest()) text-white @endif" href="#" target="_blank">{{ __('Track & Civil Structure Maintenance') }}
-                    </a>
                     ©
                     <script>
                         document.write(new Date().getFullYear())
                     </script>
+                    <a class="@if(Auth::guest()) text-white @endif" href="#">{{ __('Track & Civil Structure Maintenance') }}
+                    </a>
                 </span>
             </div>
         </div>
