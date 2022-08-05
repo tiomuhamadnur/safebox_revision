@@ -10,7 +10,7 @@
             </div>
             <a class="navbar-brand" href="#safebox">
                 <img class="logo-image-small" style="max-height: 50px" src="{{ asset('paper') }}/img/safebox_logo_white.png">
-                {{ __('SAFEBOX SYSTEM') }}
+               
             </a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">

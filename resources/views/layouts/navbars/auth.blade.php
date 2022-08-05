@@ -6,7 +6,7 @@
             </div>
         </a>
         <a href="/dashboard" class="simple-text logo-normal">
-            {{ __('SAFEBOX SYSTEM') }}
+            
         </a>
     </div>
     <div class="sidebar-wrapper">

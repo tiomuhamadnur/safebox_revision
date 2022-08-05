@@ -9,14 +9,14 @@
             <div class="container col-md-10">
                 <div class="header-body text-center mb-7">
                     <div class="row justify-content-center">
-                        <div class="col-lg-8 col-md-12 pt-5">
+                        <div class="col-lg- col-md-12 pt-5">
                             <h1 class="@if(Auth::guest()) text-white @endif">
-                                {{ __('Welcome to') }} <br>
-                                {{ __('Safebox System Pages.') }}
+                                {{ __('Welcome to SAFEBOX') }} <br>
+                                <!-- {{ __('SAFEBOX') }} -->
                             </h1>
 
-                            <p class="@if(Auth::guest()) text-white @endif text-lead mt-3 mb-0">
-                                {{ __('Log in and see how you can live a simpler life.') }}
+                            <p class="@if(Auth::guest()) text-white @endif text-lead mt-3 mb-5">
+                                {{ __('Integrated System for Tools & Materials Monitoring') }}
                             </p>
                         </div>
                     </div>
