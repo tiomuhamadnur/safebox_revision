@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Alat;
 use App\Models\AlatRusak;
 use Illuminate\Http\Request;
 
@@ -14,9 +15,8 @@ class AlatRusakController extends Controller
      */
     public function index()
     {
-        // $alat_rusak = AlatRusak::all();
-        // return view('alat-rusak.index', compact(['alat_rusak']));
-        return view('alat-rusak.index');
+        $alat_rusak = AlatRusak::all();
+        return view('alat-rusak.index', compact(['alat_rusak']));
     }
 
     /**
@@ -26,7 +26,8 @@ class AlatRusakController extends Controller
      */
     public function create()
     {
-        //
+        $alat = Alat::all();
+        return view('alat-rusak.create', compact(['alat']));
     }
 
     /**
@@ -37,7 +38,8 @@ class AlatRusakController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        AlatRusak::create($request->except(['_token', 'submit']));
+        return redirect('/alat-rusak')->withStatus(('Data berhasil ditambahkan.'));
     }
 
     /**
@@ -57,9 +59,10 @@ class AlatRusakController extends Controller
      * @param  \App\Models\AlatRusak  $alatRusak
      * @return \Illuminate\Http\Response
      */
-    public function edit(AlatRusak $alatRusak)
+    public function edit($id)
     {
-        //
+        $alat_rusak = AlatRusak::find($id);
+        return view('alat-rusak.edit', compact(['alat_rusak']));
     }
 
     /**
@@ -69,9 +72,11 @@ class AlatRusakController extends Controller
      * @param  \App\Models\AlatRusak  $alatRusak
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, AlatRusak $alatRusak)
+    public function update(Request $request, $id)
     {
-        //
+        $alat_rusak = AlatRusak::find($id);
+        $alat_rusak->update($request->except(['_token', 'submit']));
+        return redirect('/alat-rusak')->withStatus(('Data berhasil diperbaharui.'));
     }
 
     /**
@@ -80,8 +85,10 @@ class AlatRusakController extends Controller
      * @param  \App\Models\AlatRusak  $alatRusak
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AlatRusak $alatRusak)
+    public function destroy($id)
     {
-        //
+        $alat_rusak = AlatRusak::find($id);
+        $alat_rusak->delete();
+        return back()->withStatus(('Data berhasil dihapus.'));
     }
 }

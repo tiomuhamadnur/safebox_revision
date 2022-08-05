@@ -18,7 +18,9 @@
                             <div class="col-7 col-md-8">
                                 <div class="numbers">
                                     <p class="card-category">Pegawai</p>
-                                    <p class="card-title">28<p>
+                                    <p class="card-title">
+                                        {{ $pegawai->count() }}
+                                    <p>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +46,7 @@
                                 <div class="numbers">
                                     <p class="card-category">Alat</p>
                                     <p class="card-title">
-                                        128
+                                        {{ $alat->count() }}
                                     <p>
                                 </div>
                             </div>
@@ -71,7 +73,7 @@
                                 <div class="numbers">
                                     <p class="card-category">Alat Rusak</p>
                                     <p class="card-title">
-                                        7
+                                        {{ $alat_rusak->count() }}
                                     <p>
                                 </div>
                             </div>
@@ -98,7 +100,7 @@
                                 <div class="numbers">
                                     <p class="card-category">Invalid UID</p>
                                     <p class="card-title">
-                                        87
+                                        {{ $invalid->count() }}
                                     <p>
                                 </div>
                             </div>

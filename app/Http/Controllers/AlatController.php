@@ -12,8 +12,9 @@ class AlatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $keyword = $request->keyword;
         $alat = Alat::all();
         return view('alat.index', compact(['alat']));
     }

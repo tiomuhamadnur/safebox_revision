@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Alat;
+use App\Models\AlatRusak;
+use App\Models\Invalid;
+use App\Models\Pegawai;
+
 class HomeController extends Controller
 {
     /**
@@ -21,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.dashboard');
+        $pegawai = Pegawai::all();
+        $alat = Alat::all();
+        $alat_rusak = AlatRusak::all();
+        $invalid = Invalid::all();
+        return view('pages.dashboard', compact(['pegawai', 'alat', 'alat_rusak', 'invalid']));
     }
 }

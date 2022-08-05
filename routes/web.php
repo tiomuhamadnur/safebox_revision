@@ -97,6 +97,11 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/sirkulasi', [SirkulasiController::class, 'index']);
 
 	Route::get('/alat-rusak', [AlatRusakController::class, 'index']);
+	Route::get('/alat-rusak/create', [AlatRusakController::class, 'create']);
+	Route::post('/alat-rusak/store', [AlatRusakController::class, 'store']);
+	Route::get('/alat-rusak/{id}/edit', [AlatRusakController::class, 'edit']);
+	Route::put('/alat-rusak/{id}', [AlatRusakController::class, 'update']);
+	Route::delete('/alat-rusak/{id}', [AlatRusakController::class, 'destroy']);
 });
 
 Route::group(['middleware' => 'auth'], function () {

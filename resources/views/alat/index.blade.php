@@ -24,6 +24,19 @@
                                     <i class="nc-icon nc-settings"></i>
                                     Data Alat
                                 </h4>
+                                {{-- PENCARIAN --}}
+                                {{-- <div class="col-12 col-sm-12 col-md-8">
+                                    <form action="">
+                                        <div class="input-group mb-1">
+                                            <input type="text" class="form-control" name="keyword" placeholder="keyword . . ." aria-label="keyword . . ." aria-describedby="basic-addon1">
+                                            <button class="input-group-text btn-success">
+                                                <i class="nc-icon nc-zoom-split"></i>
+                                                Cari
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div> --}}
+                                {{-- PENCARIAN --}}
                             </div>
                             <div class="col-4 text-right">
                                 <a class="btn btn-primary" href="/alat/create" title="Tambah Data Alat">

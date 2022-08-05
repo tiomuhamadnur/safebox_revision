@@ -17,6 +17,12 @@
                     <p>{{ __('Dashboard') }}</p>
                 </a>
             </li>
+            <li class="{{ $elementActive == 'sirkulasi' ? 'active' : '' }}">
+                <a href="/sirkulasi">
+                    <i class="nc-icon nc-refresh-69"></i>
+                    <p>{{ __('Sirkulasi') }}</p>
+                </a>
+            </li>
             <li class="{{ $elementActive == 'users' ? 'active' : '' }}">
                 <a href="/users">
                     <i class="nc-icon nc-badge"></i>
@@ -39,12 +45,6 @@
                 <a href="/alat">
                     <i class="nc-icon nc-settings"></i>
                     <p>{{ __('Alat') }}</p>
-                </a>
-            </li>
-            <li class="{{ $elementActive == 'sirkulasi' ? 'active' : '' }}">
-                <a href="/sirkulasi">
-                    <i class="nc-icon nc-refresh-69"></i>
-                    <p>{{ __('Sirkulasi') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'alat-rusak' ? 'active' : '' }}">

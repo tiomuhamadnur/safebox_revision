@@ -10,7 +10,10 @@
                 <div class="header-body text-center mb-7">
                     <div class="row justify-content-center">
                         <div class="col-lg-8 col-md-12 pt-5">
-                            <h1 class="@if(Auth::guest()) text-white @endif">{{ __('Welcome to Safebox System Pages.') }}</h1>
+                            <h1 class="@if(Auth::guest()) text-white @endif">
+                                {{ __('Welcome to') }} <br>
+                                {{ __('Safebox System Pages.') }}
+                            </h1>
 
                             <p class="@if(Auth::guest()) text-white @endif text-lead mt-3 mb-0">
                                 {{ __('Log in and see how you can live a simpler life.') }}

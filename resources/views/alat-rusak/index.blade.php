@@ -47,50 +47,32 @@
                                         ID Inventory
                                     </th>
                                     <th>
-                                        UID Tag
-                                    </th>
-                                    <th>
-                                        Tgl. Sertifikasi
-                                    </th>
-                                    <th>
-                                        Tgl. Expired
-                                    </th>
-                                    <th>
-                                        Tipe
-                                    </th>
-                                    <th>
                                         Qty.
+                                    </th>
+                                    <th>
+                                        Last Update
                                     </th>
                                     <th>
                                         Aksi
                                     </th>
                                 </thead>
                                 <tbody class="text-center">
-                                    {{-- @foreach ($alat as $item)
+                                    @foreach ($alat_rusak as $item)
                                     <tr>
                                         <td>
                                             {{ $loop->iteration }}
                                         </td>
                                         <td>
-                                            {{ $item->name }}
+                                            {{ $item->alat->name }}
                                         </td>
                                         <td>
-                                            {{ $item->id_inventory }}
+                                            {{ $item->alat->id_inventory }}
                                         </td>
                                         <td>
-                                            {{ $item->uid }}
+                                            {{ $item->qty }}
                                         </td>
                                         <td>
-                                            {{ $item->tgl_sertifikasi }}
-                                        </td>
-                                        <td>
-                                            {{ $item->tgl_expired }}
-                                        </td>
-                                        <td>
-                                            {{ $item->tipe }}
-                                        </td>
-                                        <td>
-                                            {{ $item->stock }}
+                                            {{ $item->updated_at }}
                                         </td>
                                         <td>
                                             <li class="nav dropdown">
@@ -100,7 +82,7 @@
                                                 </a>
                                                 
                                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink2">
-                                                    <a class="dropdown-item ubah" href="/alat-rusak/{{ $item->id }}/edit" title="Ubah Data">Ubah</a>
+                                                    <a class="dropdown-item ubah" href="/alat-rusak/{{ $item->id }}/edit" title="Ubah Data Qty.">Ubah Qty.</a>
                                                     <form action="/alat-rusak/{{ $item->id }}" method="POST">
                                                         @method('delete')
                                                         @csrf
@@ -110,7 +92,7 @@
                                             </li>
                                         </td>
                                     </tr>
-                                    @endforeach --}}
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

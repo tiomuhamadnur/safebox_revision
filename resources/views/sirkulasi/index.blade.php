@@ -84,7 +84,11 @@
                                             {{ $item->created_at }}
                                         </td>
                                         <td>
+                                            @if($item->status == 'pinjam')
+                                            {{ '-' }}
+                                            @else
                                             {{ $item->updated_at }}
+                                            @endif
                                         </td>
                                         <td>
                                             {{ $item->status }}
