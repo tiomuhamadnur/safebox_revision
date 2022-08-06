@@ -20,7 +20,6 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        Alert::alert('Title', 'Message', 'Type');
         return view('users.users', compact(['users']));
     }
 
