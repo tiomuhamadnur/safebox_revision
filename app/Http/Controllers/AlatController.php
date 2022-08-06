@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Alat;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class AlatController extends Controller
 {
@@ -38,7 +40,7 @@ class AlatController extends Controller
     public function store(Request $request)
     {
         Alat::create($request->except(['_token', 'submit']));
-        return redirect('/alat')->withStatus(('Data berhasil ditambahkan.'));
+        return redirect('/alat')->with('toast_success', 'Data Berhasil Ditambahkan!');
     }
 
     /**
@@ -75,7 +77,7 @@ class AlatController extends Controller
     {
         $alat = Alat::find($id);
         $alat->update($request->except(['_token', 'submit']));
-        return redirect('/alat')->withStatus(('Data berhasil diperbaharui.'));
+        return redirect('/alat')->with('toast_success', 'Data Berhasil Diperbaharui!');
     }
 
     /**
@@ -88,6 +90,6 @@ class AlatController extends Controller
     {
         $alat = Alat::find($id);
         $alat->delete();
-        return back()->withStatus(('Data berhasil dihapus.'));
+        return back()->with('toast_success', 'Data Berhasil Dihapus!');
     }
 }

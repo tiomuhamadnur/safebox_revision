@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 
 class UserController extends Controller
@@ -18,6 +20,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
+        Alert::alert('Title', 'Message', 'Type');
         return view('users.users', compact(['users']));
     }
 

@@ -15,9 +15,9 @@
                                 <!-- {{ __('SAFEBOX') }} -->
                             </h1>
 
-                            <p class="@if(Auth::guest()) text-white @endif text-lead mt-3 mb-5">
-                                {{ __('Integrated System for Tools & Materials Monitoring') }}
-                            </p>
+                            <h4 class="@if(Auth::guest()) text-white @endif text-lead mt-3 mb-5">
+                                {{ __('Integrated System for Tools and Materials Monitoring') }}
+                            </h4>
                         </div>
                     </div>
                 </div>
