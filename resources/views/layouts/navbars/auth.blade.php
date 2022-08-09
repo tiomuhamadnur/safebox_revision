@@ -26,13 +26,13 @@
             <li class="{{ $elementActive == 'users' ? 'active' : '' }}">
                 <a href="/users">
                     <i class="nc-icon nc-badge"></i>
-                    <p>{{ __('User Managemen') }}</p>
+                    <p>{{ __('User Management') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'pegawai' ? 'active' : '' }}">
                 <a href="/pegawai">
                     <i class="nc-icon nc-circle-10"></i>
-                    <p>{{ __('Pegawai') }}</p>
+                    <p>{{ __('User') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'invalid' ? 'active' : '' }}">
@@ -102,12 +102,12 @@
                     </ul>
                 </div>
             </li> --}}
-            <li class="{{ $elementActive == 'icons' ? 'active' : '' }}">
+            <!-- <li class="{{ $elementActive == 'icons' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'icons') }}">
                     <i class="nc-icon nc-diamond"></i>
                     <p>{{ __('Icons') }}</p>
                 </a>
-            </li>
+            </li> -->
             {{-- <li class="{{ $elementActive == 'map' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'map') }}">
                     <i class="nc-icon nc-pin-3"></i>

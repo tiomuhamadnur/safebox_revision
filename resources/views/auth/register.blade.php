@@ -1,6 +1,6 @@
 @extends('layouts.app', [
     'class' => 'register-page',
-    'backgroundImagePath' => 'img/bg/jan-sendereks.jpg'
+    'backgroundImagePath' => 'img/bg/sst.jpg'
 ])
 
 @section('content')
@@ -13,31 +13,31 @@
                             <i class="nc-icon nc-tv-2"></i>
                         </div>
                         <div class="description">
-                            <h5 class="info-title">{{ __('Marketing') }}</h5>
+                            <h5 class="info-title">{{ __('Integrated') }}</h5>
                             <p class="description">
-                                {{ __('We\'ve created the marketing campaign of the website. It was a very interesting collaboration.') }}
+                                {{ __('Fully applicable and integrated system for efficient work continuity.') }}
                             </p>
                         </div>
                     </div>
                     <div class="info-area info-horizontal">
                         <div class="icon icon-primary">
-                            <i class="nc-icon nc-html5"></i>
+                            <i class="nc-icon nc-watch-time"></i>
                         </div>
                         <div class="description">
-                            <h5 class="info-title">{{ __('Fully Coded in HTML5') }}</h5>
+                            <h5 class="info-title">{{ __('Realtime') }}</h5>
                             <p class="description">
-                                {{ __('We\'ve developed the website with HTML5 and CSS3. The client has access to the code using GitHub.') }}
+                                {{ __('Virtually immediately updated data. Easyway to monitor the stocks & the status of Tools & Materials.') }}
                             </p>
                         </div>
                     </div>
                     <div class="info-area info-horizontal">
                         <div class="icon icon-info">
-                            <i class="nc-icon nc-atom"></i>
+                            <i class="nc-icon nc-tablet-2"></i>
                         </div>
                         <div class="description">
-                            <h5 class="info-title">{{ __('Built Audience') }}</h5>
+                            <h5 class="info-title">{{ __('Paperless') }}</h5>
                             <p class="description">
-                                {{ __('There is also a Fully Customizable CMS Admin Dashboard for this product.') }}
+                                {{ __('Supporting eco system with paperless system.') }}
                             </p>
                         </div>
                     </div>

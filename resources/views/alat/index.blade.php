@@ -4,6 +4,8 @@
 ])
 
 @section('content')
+@include('sweetalert::alert')
+
     <div class="content">
         @if (session('status'))
         <div class="alert alert-success alert-dismissible fade show">
@@ -109,7 +111,7 @@
                                             <li class="nav dropdown">
                                                 <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink2"
                                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="nc-icon nc-settings-gear-65"></i>
+                                                    <i class="nc-icon nc-settings-gear-65" ></i>
                                                 </a>
                                                 
                                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink2">
