@@ -1,20 +1,5 @@
-@extends('layouts.app', [
-    'class' => '',
-    'elementActive' => 'invalid'
-])
 
-@section('content')
-    {{-- <div id="data_invalid"></div> --}}
     <div class="content">
-        @if (session('status'))
-        <div class="alert alert-success alert-dismissible fade show">
-            <button type="button" aria-hidden="true" class="close" data-dismiss="alert"
-                aria-label="Close">
-                <i class="nc-icon nc-simple-remove"></i>
-            </button>
-            <span>{{ session('status') }}</span>
-        </div>
-        @endif
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -53,7 +38,7 @@
                                         Aksi
                                     </th>
                                 </thead>
-                                <tbody id="data_invalid">
+                                <tbody>
                                     @foreach ($invalid as $item)
                                     <tr>
                                         <td>
@@ -92,23 +77,3 @@
             </div>
         </div>
     </div>
-
-    {{-- <script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script>
-        $(document).ready(function(){
-              $.ajax({
-              url: "data.blade.php"
-              }).done(function(data) {
-              $('#data_invalid').html(data);
-            });
-          setInterval(function(){
-            $.ajax({
-              url: "index.blade.php"
-              }).done(function(data) {
-              $('#data_invalid').html(data);
-            });
-          },5000);
-        });
-    </script> --}}
-
-@endsection

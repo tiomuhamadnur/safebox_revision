@@ -1,18 +1,18 @@
 <div class="sidebar" data-color="white" data-active-color="danger">
     <div class="logo">
-        <a href="#" class="simple-text logo-mini">
+        <a href="#safebox" class="simple-text logo-mini">
             <div class="logo-image-small">
                 <img src="{{ asset('paper') }}/img/safebox_logo.png">
             </div>
         </a>
-        <a href="/dashboard" class="simple-text logo-normal">
+        <a href="/home" class="simple-text logo-normal">
             {{ __('SAFEBOX SYSTEM') }}
         </a>
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
             <li class="{{ $elementActive == 'dashboard' ? 'active' : '' }}">
-                <a href="{{ route('page.index', 'dashboard') }}">
+                <a href="/home">
                     <i class="nc-icon nc-chart-pie-36"></i>
                     <p>{{ __('Dashboard') }}</p>
                 </a>

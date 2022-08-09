@@ -8,6 +8,7 @@ use App\Http\Controllers\InvalidController;
 use App\Http\Controllers\MonitoringController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PeopleController;
+use App\Http\Controllers\RfidController;
 use App\Http\Controllers\SirkulasiController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WargaController;
@@ -25,6 +26,9 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/rfid', [RfidController::class, 'index']);
+Route::get('/rfid/{uid}', [RfidController::class, 'show']);
 
 Route::get('/', function () {
 	return view('welcome');
