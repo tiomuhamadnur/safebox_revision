@@ -72,6 +72,38 @@ class RfidController extends Controller
         }
     }
 
+
+    public function periksa($uid, $id_alat)
+    {
+        $pegawai = DB::table('pegawai')->where('uid', '=', $uid)->get();
+        $alat = DB::table('alat')->where('id', '=', $id_alat)->get();
+        $validate_pegawai = $pegawai->count();
+        $validate_alat = $alat->count();
+
+        if (($validate_pegawai == 0) && ($validate_alat == 0)) {
+            // Invalid::create([
+            //     'uid' => $uid,
+            //     'status' => 'INVALID',
+            // ]);
+            return response()->json([
+                'data' => 'INVALID',
+            ], 401);
+        }
+        // elseif ($validate_alat == 0) {
+        //     return response()->json([
+        //         'data' => $pegawai
+        //     ]);
+        // }
+        else {
+            return response()->json([
+                'data pegawai' => $pegawai,
+                'data alat' => $alat
+            ]);
+        }
+    }
+
+
+
     /**
      * Show the form for editing the specified resource.
      *

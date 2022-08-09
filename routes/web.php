@@ -29,6 +29,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/rfid', [RfidController::class, 'index']);
 Route::get('/rfid/{uid}', [RfidController::class, 'show']);
+Route::get('/rfid/periksa/{uid}/{id_alat}', [RfidController::class, 'periksa']);
 
 Route::get('/', function () {
 	return view('welcome');
